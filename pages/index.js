@@ -1,115 +1,99 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Header from "../components/Header";
+import { HeartIcon } from "@heroicons/react/outline";
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
+    <div>
+      <Header />
+      <div className=" mx-10 my-10">
+        <div class="grid grid-cols-3 gap-10">
+          <div>
+            <div class="grid grid-cols-4">
+              <div className="cursor-pointer font-medium">DETAILS</div>
+              <div className="cursor-pointer">DELIVERY</div>
+              <div className="cursor-pointer">FIT</div>
+              <div className="cursor-pointer">SHARE</div>
+            </div>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              The Forte Lurex Linen Viscose Jacket in Mother of Pearl features
+              lunar lavishness by night and by day: a blazer in a linen blend
+              shot with lurex for a shimmering surface that shines like a star
+              in the sky. it has a straight fit with well defined shoulders and
+              a shawl collar culminating in a button and has been flawlessly
+              finished with three jet pockets with a sartorial feel. See the
+              EDITOR’S NOTE Learn about the DESIGNER
             </p>
-          </a>
+          </div>
+          <div>
+            <div
+              style={{ height: "100vh", overflowY: "scroll" }}
+              class={styles.imageContent}
+            >
+              <HeartIcon className={`h-5 w-5 text-black-500 ${styles.icon}`} />
+              <img
+                src={"/images/pic1.jpg"}
+                alt="pic1"
+                className={styles.image}
+              />
+
+              <img
+                src={"/images/pic2.jpg"}
+                alt="pic1"
+                className={styles.image}
+              />
+
+              <img
+                src={"/images/pic3.jpg"}
+                alt="pic1"
+                className={styles.image}
+              />
+            </div>
+            <div className="grid grid-cols-1 gap-4">
+              <span className="text-center font-medium">
+                a note from the editor
+              </span>
+              <span className="text-center font-medium">
+                The Forte Lurex Linen Viscose Jacket in Mother of Pearl features
+                lunar lavishness by night and by day: a blazer in a linen blend
+                shot with lurex for a shimmering surface that shines like a star
+                in the sky.
+              </span>
+            </div>
+          </div>
+          <div>
+            <div class="grid ">
+              <h1 className="text-5xl">JONATHAN SIMKHAI</h1>
+              <span>Lurex Linen Viscose Jacket in Conchiglia</span>
+              <span>$335</span>
+              <span>
+                <b>color</b>:Conchiglia
+              </span>
+              <div className="grid grid-cols-12 mt-5">
+                <div className="border-solid border-2 border-black-500 text-center">
+                  <img
+                    src={"/images/pic1.jpg"}
+                    alt="pic1"
+                    className={`${styles.image} text-center`}
+                    width={30}
+                  />
+                </div>
+                <div className="border-solid border-2 border-black-500 text-center ml-2">
+                  <img
+                    src={"/images/pic2.jpg"}
+                    alt="pic1"
+                    className={styles.image}
+                    width={50}
+                  />
+                </div>
+              </div>
+              <button class="bg-black hover:bg-black-100 text-white font-semibold py-2 px-4 border border-black-400 rounded-3xl shadow-10">
+                Add to Bag
+              </button>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+      </div>
     </div>
-  )
+  );
 }
